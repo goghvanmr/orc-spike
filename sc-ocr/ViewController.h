@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (weak, nonatomic)IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *recognizedText;
 
 @end

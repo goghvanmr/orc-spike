@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,21 +9,66 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-ar-IQa"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tT-NQ-mPV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ecK-Ll-329"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="231" translatesAutoresizingMaskIntoConstraints="NO" id="10d-qa-ZUd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="P5C-6R-4cZ"/>
+                                    <constraint firstAttribute="width" constant="231" id="TKF-ME-pRW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2y-sJ-GVN">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginScan:" destination="2" eventType="touchUpInside" id="cBd-tg-USv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCb-KM-nqK">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Recognize">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recognize:" destination="2" eventType="touchUpInside" id="zR1-MA-SCJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nNZ-ar-IQa" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="3ZZ-NR-tyR"/>
-                            <constraint firstItem="nNZ-ar-IQa" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5Lp-To-Cph"/>
-                            <constraint firstItem="nNZ-ar-IQa" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="C3Q-ll-uPI"/>
-                            <constraint firstItem="nNZ-ar-IQa" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="lGE-sf-Sgk"/>
+                            <constraint firstItem="XCb-KM-nqK" firstAttribute="trailing" secondItem="10d-qa-ZUd" secondAttribute="trailing" type="default" id="A7A-nD-QDs"/>
+                            <constraint firstItem="c2y-sJ-GVN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="86" id="AGH-jE-3Qr"/>
+                            <constraint firstItem="XCb-KM-nqK" firstAttribute="baseline" secondItem="c2y-sJ-GVN" secondAttribute="baseline" type="default" id="EYp-0h-LsA"/>
+                            <constraint firstAttribute="trailing" secondItem="7tT-NQ-mPV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gja-eq-p2Z"/>
+                            <constraint firstItem="c2y-sJ-GVN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="37" id="HWv-Ba-pnK"/>
+                            <constraint firstItem="7tT-NQ-mPV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IYX-lj-s1s"/>
+                            <constraint firstAttribute="bottom" secondItem="10d-qa-ZUd" secondAttribute="bottom" constant="52" id="JSO-1H-UKK"/>
+                            <constraint firstItem="7tT-NQ-mPV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="184" id="JkX-Tg-wYK"/>
+                            <constraint firstItem="10d-qa-ZUd" firstAttribute="centerX" secondItem="7tT-NQ-mPV" secondAttribute="centerX" type="default" id="Xkc-jD-gLe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="nNZ-ar-IQa" id="Dgh-BM-aeq"/>
+                        <outlet property="image" destination="7tT-NQ-mPV" id="I8c-mW-Zq8"/>
+                        <outlet property="recognizedText" destination="10d-qa-ZUd" id="IPw-B6-wy2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -37,13 +82,16 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="beginScan:" candidateClass="UIButton"/>
+                <relationship kind="action" name="recognize:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="recognizedText" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

@@ -267,11 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				49BAE872179D08C60054322E /* GPUImage.xcodeproj */,
-				49BAE870179D08560054322E /* QuartzCore.framework */,
-				49BAE86E179D084A0054322E /* AVFoundation.framework */,
-				49BAE86C179D08410054322E /* OpenGLES.framework */,
-				49BAE86A179D08330054322E /* CoreVideo.framework */,
-				49BAE868179D08290054322E /* CoreMedia.framework */,
 				49BAE84C179D01660054322E /* tessdata */,
 				49BAE752179CC1740054322E /* sc-ocr */,
 				49BAE74B179CC1740054322E /* Frameworks */,
@@ -290,6 +285,11 @@
 		49BAE74B179CC1740054322E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49BAE870179D08560054322E /* QuartzCore.framework */,
+				49BAE86E179D084A0054322E /* AVFoundation.framework */,
+				49BAE86C179D08410054322E /* OpenGLES.framework */,
+				49BAE86A179D08330054322E /* CoreVideo.framework */,
+				49BAE868179D08290054322E /* CoreMedia.framework */,
 				49BAE74C179CC1740054322E /* UIKit.framework */,
 				49BAE74E179CC1740054322E /* Foundation.framework */,
 				49BAE750179CC1740054322E /* CoreGraphics.framework */,
